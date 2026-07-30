@@ -71,7 +71,7 @@ app.put("/updateStudent", (req, res) => {
             "Year": updateData.Year  
         },
         { new: true } // 3. Optional but helpful: returns the updated student document instead of the old one
-    )
+    ) 
     .then((updatedStudent) => {
         if (!updatedStudent) {
             return res.status(404).send("Student not found");
